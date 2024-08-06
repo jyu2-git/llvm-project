@@ -185,6 +185,9 @@ Bug Fixes to C++ Support
 - Clang now correctly recognizes the correct context for parameter
   substitutions in concepts, so it doesn't incorrectly complain of missing
   module imports in those situations. (#GH60336)
+- Fix init-capture packs having a size of one before being instantiated. (#GH63677)
+- Clang now preserves the unexpanded flag in a lambda transform used for pack expansion. (#GH56852), (#GH85667),
+  (#GH99877).
 
 Bug Fixes to AST Handling
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -322,6 +325,7 @@ Python Binding Changes
 
 OpenMP Support
 --------------
+- Added support for 'omp assume' directive.
 
 Improvements
 ^^^^^^^^^^^^
